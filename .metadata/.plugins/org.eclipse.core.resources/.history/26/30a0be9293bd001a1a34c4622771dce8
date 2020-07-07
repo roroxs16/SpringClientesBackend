@@ -1,0 +1,8 @@
+package com.training.apring.boot.backend.apirest;
+
+public class Snippet {
+	public static void main(String[] args) {
+		spring.jpa.generate-ddl=true
+	}
+}
+

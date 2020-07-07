@@ -1,0 +1,7 @@
+package com.training.apring.boot.backend.apirest.services;
+
+public interface IClienteService {
+	
+	public List<Cliente> findAll();
+
+}

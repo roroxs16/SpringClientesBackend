@@ -1,0 +1,13 @@
+INSERT INTO clientes (name, last_name, created_at, email) VALUES('Rodrigo',Cifuentes','rodrigo@angularyspring.com', '2020-07-03');
+INSERT INTO clientes (name, last_name, created_at, email) VALUES('Matias',Contreras','rosdgo@angularyspring.com', '2020-07-03');
+INSERT INTO clientes (name, last_name, created_at, email) VALUES('Natalia',Bustamantes','rfdigo@angularyspring.com', '2020-07-03');
+INSERT INTO clientes (name, last_name, created_at, email) VALUES('Florencia',Cifuentes','rfdigo@angularyspring.com', '2020-07-03');
+INSERT INTO clientes (name, last_name, created_at, email) VALUES('Manuel',Rodriguez','rodrigo@angularyspring.com', '2020-07-03');
+INSERT INTO clientes (name, last_name, created_at, email) VALUES('Alberto',Vasquez','rodfd@angularyspring.com', '2020-07-03');
+INSERT INTO clientes (name, last_name, created_at, email) VALUES('Camilo',Muñoz','rodfdngu@laryspring.com', '2020-07-03');
+INSERT INTO clientes (name, last_name, created_at, email) VALUES('Martin',Hahn','rofdgulary@spring.com', '2020-07-03');
+INSERT INTO clientes (name, last_name, created_at, email) VALUES('Sebastian',Delpin','rodrigo@angularyspring.com', '2020-07-03');
+INSERT INTO clientes (name, last_name, created_at, email) VALUES('Simon',Varas','rodrigfdularyspring.com', '2020-07-03');
+INSERT INTO clientes (name, last_name, created_at, email) VALUES('Gustavo',Rubilar','rodrigo@angularyspring.com', '2020-07-03');
+INSERT INTO clientes (name, last_name, created_at, email) VALUES('Rosario',Melendez','rodrigo@angularyspring.com', '2020-07-03');
+INSERT INTO clientes (name, last_name, created_at, email) VALUES('Rocio',Lorca','rodrigo@angularyspring.com', '2020-07-03');

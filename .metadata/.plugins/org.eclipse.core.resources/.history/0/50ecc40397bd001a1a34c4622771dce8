@@ -1,0 +1,25 @@
+package com.training.apring.boot.backend.apirest.services;
+
+import java.util.List;
+
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.transaction.annotation.Transactional;
+
+import com.training.apring.boot.backend.apirest.dao.IClienteDao;
+import com.training.apring.boot.backend.apirest.models.Cliente;
+
+@Service
+public class ClienteServicesImpl implements IClienteService {
+
+	@Autowired
+	private IClienteDao clienteDao;
+	
+	@Override
+	@Transactional(readOnly=true)
+	public List<Cliente> findAll() {
+		// TODO Auto-generated method stub
+		return (List<Cliente>) clienteDao.findAll();
+	}
+
+}

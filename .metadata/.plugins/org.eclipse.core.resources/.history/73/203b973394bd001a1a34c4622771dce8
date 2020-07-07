@@ -1,0 +1,5 @@
+package com.training.apring.boot.backend.apirest.dao;
+
+public interface ClienteDao {
+
+}

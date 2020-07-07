@@ -1,0 +1,11 @@
+package com.training.apring.boot.backend.apirest.dao;
+
+import org.springframework.data.repository.CrudRepository;
+import org.springframework.stereotype.Repository;
+
+import com.training.apring.boot.backend.apirest.models.Cliente;
+
+@Repository
+public interface IClienteDao extends CrudRepository<Cliente, Long> {
+
+}

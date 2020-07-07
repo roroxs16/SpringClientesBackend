@@ -1,0 +1,11 @@
+package com.training.apring.boot.backend.apirest.services;
+
+import java.util.List;
+
+import com.training.apring.boot.backend.apirest.models.Cliente;
+
+public interface IClienteService {
+	
+	public List<Cliente> findAll();
+
+}
