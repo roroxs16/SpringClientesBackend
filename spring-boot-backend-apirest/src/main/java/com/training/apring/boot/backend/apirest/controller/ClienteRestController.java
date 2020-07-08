@@ -59,7 +59,6 @@ public class ClienteRestController {
 	}
 
 	@PostMapping("/clientes")
-	@ResponseStatus(HttpStatus.CREATED)
 	public ResponseEntity<?> create(@RequestBody Cliente cliente) {
 
 		Cliente clienteNew = null;
@@ -79,7 +78,6 @@ public class ClienteRestController {
 	}
 
 	@PutMapping("/clientes/{id}")
-	@ResponseStatus(HttpStatus.CREATED)
 	public ResponseEntity<?> update(@RequestBody Cliente cliente, @PathVariable Long id) {
 		
 		
