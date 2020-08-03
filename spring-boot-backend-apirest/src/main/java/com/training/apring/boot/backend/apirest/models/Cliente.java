@@ -18,31 +18,33 @@ import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
 @Entity
-@Table(name="clientes")
+@Table(name = "clientes")
 public class Cliente implements Serializable {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	public Long id;
+	private Long id;
 
-	@NotEmpty(message = " Nombre no puede estar vacio")
-	@Size(min=4, max= 12, message=" Nombre debe tener entre 4 y 12 caracteres")
-	@Column(nullable=false)
-	public String name;
-	
-	@NotEmpty(message = " Apellido no puede estar vacio")
-	public String lastName;
-	
-	@NotEmpty(message = " Email no puede estar vacio")
-	@Email(message=" Email el formato no es correcto")
-	@Column(nullable=false, unique=true)
-	public String email;
-	
-	@NotNull(message = " Fecha de creación no puede estar vacio")
-	@Column(name="create_at")
+	@NotEmpty(message = "no puede estar vacio")
+	@Size(min = 4, max = 12, message = "el tamaño tiene que estar entre 4 y 12")
+	@Column(nullable = false)
+	private String nombre;
+
+	@NotEmpty(message = "no puede estar vacio")
+	private String apellido;
+
+	@NotEmpty(message = "no puede estar vacio")
+	@Email(message = "no es una dirección de correo bien formada")
+	@Column(nullable = false, unique = true)
+	private String email;
+
+	@NotNull(message = "no puede estar vacio")
+	@Column(name = "create_at")
 	@Temporal(TemporalType.DATE)
-	public Date createAt;
-	
+	private Date createAt;
+
+	private String foto;
+
 	public Long getId() {
 		return id;
 	}
@@ -51,20 +53,20 @@ public class Cliente implements Serializable {
 		this.id = id;
 	}
 
-	public String getName() {
-		return name;
+	public String getNombre() {
+		return nombre;
 	}
 
-	public void setName(String name) {
-		this.name = name;
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
 	}
 
-	public String getLastName() {
-		return lastName;
+	public String getApellido() {
+		return apellido;
 	}
 
-	public void setLastName(String lastName) {
-		this.lastName = lastName;
+	public void setApellido(String apellido) {
+		this.apellido = apellido;
 	}
 
 	public String getEmail() {
@@ -83,8 +85,13 @@ public class Cliente implements Serializable {
 		this.createAt = createAt;
 	}
 
-	/**
-	 * 
-	 */
+	public String getFoto() {
+		return foto;
+	}
+
+	public void setFoto(String foto) {
+		this.foto = foto;
+	}
+
 	private static final long serialVersionUID = 2308015489163945023L;
 }

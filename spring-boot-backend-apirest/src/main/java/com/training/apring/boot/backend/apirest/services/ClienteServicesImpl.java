@@ -17,39 +17,36 @@ public class ClienteServicesImpl implements IClienteService {
 	@Autowired
 	private IClienteDao clienteDao;
 
+	
 	@Override
-
+	@Transactional(readOnly = true)
 	public List<Cliente> findAll() {
-
 		return (List<Cliente>) clienteDao.findAll();
 	}
 
 	@Override
 	@Transactional(readOnly = true)
 	public Page<Cliente> findAll(Pageable pageable) {
-		// TODO Auto-generated method stub
 		return clienteDao.findAll(pageable);
 	}
 	
 	@Override
-	public Cliente save(Cliente cliente) {
+	@Transactional(readOnly = true)
+	public Cliente findById(Long id) {
+		return clienteDao.findById(id).orElse(null);
+	}
 
+	@Override
+	@Transactional
+	public Cliente save(Cliente cliente) {
 		return clienteDao.save(cliente);
 	}
 
 	@Override
+	@Transactional
 	public void delete(Long id) {
-
 		clienteDao.deleteById(id);
 	}
-
-	@Transactional(readOnly = true)
-	@Override
-	public Cliente finById(Long id) {
-
-		return clienteDao.findById(id).orElse(null);
-	}
-
 
 
 }

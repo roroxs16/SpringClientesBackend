@@ -9,13 +9,14 @@ import com.training.apring.boot.backend.apirest.models.Cliente;
 
 public interface IClienteService {
 	
-	public List<Cliente> findAll();
 
+	public List<Cliente> findAll();
+	
+	public Page<Cliente> findAll(Pageable pageable);
+	
+	public Cliente findById(Long id);
+	
 	public Cliente save(Cliente cliente);
 	
 	public void delete(Long id);
-	
-	public Cliente finById(Long id);
-	
-	public Page<Cliente> findAll(Pageable pageable);
 }
