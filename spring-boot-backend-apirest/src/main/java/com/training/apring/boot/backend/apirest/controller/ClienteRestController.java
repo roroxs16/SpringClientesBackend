@@ -38,6 +38,7 @@ import org.springframework.web.multipart.MultipartFile;
 import com.training.apring.boot.backend.apirest.services.IClienteService;
 import com.training.apring.boot.backend.apirest.services.IUploadFileService;
 import com.training.apring.boot.backend.apirest.models.Cliente;
+import com.training.apring.boot.backend.apirest.models.Region;
 
 @CrossOrigin(origins = { "http://localhost:4200" })
 @RestController
@@ -145,6 +146,7 @@ public class ClienteRestController {
 			clienteActual.setNombre(cliente.getNombre());
 			clienteActual.setEmail(cliente.getEmail());
 			clienteActual.setCreateAt(cliente.getCreateAt());
+			clienteActual.setRegion(cliente.getRegion());
 
 			clienteUpdated = clienteService.save(clienteActual);
 
@@ -231,6 +233,11 @@ public class ClienteRestController {
 		cabecera.add(HttpHeaders.CONTENT_DISPOSITION, "attachment; filename=\"" + recurso.getFilename() + "\"");
 		
 		return new ResponseEntity<Resource>(recurso, cabecera, HttpStatus.OK);
+	}
+	
+	@GetMapping("/clientes/regiones")
+	public List<Region> listarRegiones(){
+		return clienteService.findAllRegiones();
 	}
 }
 
